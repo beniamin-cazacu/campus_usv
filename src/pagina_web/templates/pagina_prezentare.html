@@ -1,19 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title> Echipa IE </title>
-</head>
-<body>
-<h1>
-    <center>Prezentare Echipa</center>
-</h1>
+{% extends 'base.html' %}
+{% block title %}WebPage|Events{% endblock %}
+{% block add-nav %}
+<li><a href=""><span class="glyphicon glyphicon-user"></span> Web Page</a></li></li>
+{% endblock %}
+{% block content %}
 <br>
-<h3>Tema : Un site/secțiune platformă web cu întrebări și răspunsuri puse frecvent secretariatului </h3>
-<hr>
-<h2>Echipa:</h2>
-<ul>
-    <li>
+<br>
+<br>
+
+<div class='row'>
+
+        <h1>
+            <center>Prezentare Echipa</center>
+        </h1>
+        <br>
+        <h3>Tema : Un site/secțiune platformă web cu întrebări și răspunsuri puse frecvent secretariatului </h3>
+        <hr>
+        <h2>Echipa:</h2>
+        <ul>
+            <li>
         <p> Bucurel Adriana </p><br>
         <img src="https://scontent-otp1-1.xx.fbcdn.net/v/t1.0-9/21616166_1449214425126467_39932434587064740_n.jpg?_nc_cat=0&oh=b89d5ef38d57d56a08cb1e48ba7c37dc&oe=5B2C34FC"
              width="200px" height="200px">
@@ -43,6 +48,9 @@
              width="200px" height="200px">
 
     </li>
-</ul>
-</body>
-</html>
+        </ul>
+
+
+</div>
+
+{% endblock content %}

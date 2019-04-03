@@ -55,7 +55,9 @@ ROOT_URLCONF = 'platforma_web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR + '/templates/',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,6 +72,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'platforma_web.wsgi.application'
 
+LOGIN_REDIRECT_URL = 'principal_page'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases

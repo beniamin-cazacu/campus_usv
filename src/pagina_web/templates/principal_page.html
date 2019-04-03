@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}WebPage|Events{% endblock %}
+{% block add-nav %}
+<li><a href=""><span class="glyphicon glyphicon-user"></span> Web Page</a></li></li>
+{% endblock %}
+{% block content %}
+<br>
+<br>
+<br>
+
+<div class='row'>
+    <h1>
+        {% if user.is_authenticated %}
+        <p>Welcome, {{ user.get_username }}. Thanks for logging in.</p>
+        {% else %}
+        <p>Welcome, new user. Please log in.</p>
+        {% endif %}
+        <a href="{% url 'logout' %}"> Log out</a>
+    </h1>
+</div>
+
+{% endblock content %}
