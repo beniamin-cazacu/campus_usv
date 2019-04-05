@@ -5,6 +5,10 @@
     <title> {% block title %}Assisted{% endblock %}</title>
 
     {% load staticfiles %}
+
+    {% block head %}
+    {% endblock %}
+
     {% include 'snippets/css.html' %}
     {% include 'snippets/js.html' %}
 
@@ -21,8 +25,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://assist-software.net/">ASSIST</a>
         </div>
+
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 {% block add-nav %}
