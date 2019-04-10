@@ -3,13 +3,18 @@ from django.contrib.auth import views as auth_views
 
 from pagina_web.views import (
     AboutView,
-    PrincipalPage
+    PrincipalPageView,
+    ApplicationEnrollmentView
 )
 
 urlpatterns = [
 
     url(r'^login/$', auth_views.login, name='login'),
-    url(r'^logout/$', auth_views.logout,  {'next_page': 'login'}, name='logout'),
-    url(r'^prezentare/', AboutView.as_view(), name="pagina_prezentare"),
-    url(r'^principal/', PrincipalPage.as_view(), name="principal_page")
+    url(r'^logout/$', auth_views.logout, {'next_page': 'login'}, name='logout'),
+    url(r'^developers/$', AboutView.as_view(), name="developers_details"),
+    url(r'^application/$', ApplicationEnrollmentView.as_view(), name="application_enrollment"),
+    url(r'^', PrincipalPageView.as_view(), name="principal_page"),
+
 ]
+
+

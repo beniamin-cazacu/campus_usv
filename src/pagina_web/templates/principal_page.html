@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 {% endblock %}
 
-{% block title %}WebPage|Events{% endblock %}
+{% block title %}Principal{% endblock %}
 {% block add-nav %}
 <li><a href=""><span class="glyphicon glyphicon-user"></span> Web Page</a></li></li>
 {% endblock %}
@@ -22,6 +22,12 @@
         {% endif %}
         <a href="{% url 'logout' %}"> Log out</a>
     </h1>
+    <hr>
+    <a href="{% url 'login' %}">Login</a>
+    <hr>
+    <a href="{% url 'application_enrollment' %}">Cerere inscriere</a>
+    <hr>
+    <a href="{% url 'developers_details' %}">Prezentare developeri</a>
 </div>
 
 {% endblock content %}
