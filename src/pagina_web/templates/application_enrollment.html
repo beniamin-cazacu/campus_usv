@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
-<!--<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">-->
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 {% endblock %}
 
-{% block title %}Application{% endblock %}
+{% block title %}Principal{% endblock %}
 {% block add-nav %}
+<li><a href=""><span class="glyphicon glyphicon-user"></span> Web Page</a></li></li>
 {% endblock %}
 {% block content %}
 <br>
@@ -14,13 +15,19 @@
 
 <div class='row'>
     <h1>
-        <center>Cerere student reprezentant</center>
+        {% if user.is_authenticated %}
+        <p>Welcome, {{ user.get_username }}. Thanks for logging in.</p>
+        {% else %}
+        <p>Welcome, new user. Please log in.</p>
+        {% endif %}
+        <a href="{% url 'web_page:logout' %}"> Log out</a>
     </h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Submit"/>
-    </form>
+    <hr>
+    <a href="{% url 'web_page:login' %}">Login</a>
+    <hr>
+    <a href="{% url 'web_page:application_enrollment' %}">Cerere inscriere</a>
+    <hr>
+    <a href="{% url 'web_page:developers_details' %}">Prezentare developeri</a>
 </div>
 
 {% endblock content %}

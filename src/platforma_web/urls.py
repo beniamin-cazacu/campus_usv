@@ -5,5 +5,5 @@ from django.contrib import admin
 urlpatterns = [
 
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('pagina_web.urls'))
+    url(r'^', include('pagina_web.urls', namespace="web_page"))
 ]

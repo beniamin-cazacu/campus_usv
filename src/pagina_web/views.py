@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib import messages
+from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
 from django.views.generic import TemplateView, FormView
 
@@ -9,25 +9,30 @@ from django.views.generic import TemplateView, FormView
 from pagina_web.forms import ApplicationEnrollmentForm
 
 
-class AboutView(LoginRequiredMixin, TemplateView):
-    login_url = 'login'
+def redirect_home(request):
+    return redirect("web_page:home_page")
+
+
+class AboutView(TemplateView):
     template_name = "developers_details.html"
 
 
 #
 # class PrincipalPage(LoginRequiredMixin, TemplateView):
 #     login_url = 'login'
-#     template_name = "principal_page.html"
+#     template_name = "home_page.html"
 
-class PrincipalPageView(TemplateView):
-    template_name = "principal_page.html"
+class HomePageView(TemplateView):
+    template_name = "home_page.html"
 
 
 class ApplicationEnrollmentView(FormView):
     template_name = "application_enrollment.html"
     form_class = ApplicationEnrollmentForm
-    success_url = 'principal_page'
+    success_url = 'web_page:home_page'
 
     def form_valid(self, form):
         form.save()
-        return redirect('principal_page')
+        messages.success(self.request, 'Successfully enrolled.')
+        return HttpResponseRedirect(self.request.path)
+        # return redirect('web_page:home_page')
