@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
@@ -7,6 +8,7 @@ from django.views.generic import TemplateView, FormView
 
 # @login_required(login_url='{% url "login" %}')
 from pagina_web.forms import ApplicationEnrollmentForm
+from pagina_web.utils import send_email_application_enrollement
 
 
 def redirect_home(request):
@@ -33,6 +35,9 @@ class ApplicationEnrollmentView(FormView):
 
     def form_valid(self, form):
         form.save()
+        first_name = form.cleaned_data.get('first_name')
+        email = form.cleaned_data.get('email')
+        send_email_application_enrollement(first_name, first_name, email)
         messages.success(self.request, 'Successfully enrolled.')
         return HttpResponseRedirect(self.request.path)
         # return redirect('web_page:home_page')
