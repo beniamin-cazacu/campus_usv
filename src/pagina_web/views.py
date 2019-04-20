@@ -2,12 +2,12 @@
 from __future__ import unicode_literals
 
 from django.contrib import messages
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import redirect
-from django.views.generic import TemplateView, FormView
+from django.views.generic import TemplateView, FormView, ListView, DetailView
 
-# @login_required(login_url='{% url "login" %}')
 from pagina_web.forms import ApplicationEnrollmentForm
+from pagina_web.models import ApplicationEnrollment
 from pagina_web.utils import send_email_application_enrollement
 
 
@@ -41,3 +41,32 @@ class ApplicationEnrollmentView(FormView):
         messages.success(self.request, 'Successfully enrolled.')
         return HttpResponseRedirect(self.request.path)
         # return redirect('web_page:home_page')
+
+
+class ListApplicantsView(ListView):
+    template_name = 'list_applicants.html'
+
+    def get_queryset(self):
+        query = ApplicationEnrollment.objects.all().order_by("first_name")
+        return query
+
+
+class ApplicantDetailsView(DetailView):
+    template_name = 'applicant_details.html'
+    model = ApplicationEnrollment
+
+    def get_context_data(self, **kwargs):
+        context = super(ApplicantDetailsView, self).get_context_data(**kwargs)
+        context['object'] = self.model.objects.get(pk=self.kwargs.get('pk'))
+        return context
+
+
+def response_application(request, pk, response_id):
+    """ Response for student application (accepted or rejected) and send email
+        @:param pk - student id
+        @:param response_id (0 - rejected , 1 - accepted)
+        """
+    if response_id == '1':
+        student = ApplicationEnrollment.objects.get(id=pk)
+        print(student.email)
+    return HttpResponse(str(response_id))

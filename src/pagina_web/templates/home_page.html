@@ -20,14 +20,16 @@
         {% else %}
         <p>Welcome, new user. Please log in.</p>
         {% endif %}
-        <a href="{% url 'logout' %}"> Log out</a>
+        <a href="{% url 'web_page:logout' %}"> Log out</a>
     </h1>
     <hr>
-    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'web_page:login' %}">Login</a>
     <hr>
-    <a href="{% url 'application_enrollment' %}">Cerere inscriere</a>
+    <a href="{% url 'web_page:application_enrollment' %}">Cerere inscriere</a>
     <hr>
-    <a href="{% url 'developers_details' %}">Prezentare developeri</a>
+    <a href="{% url 'web_page:developers_details' %}">Prezentare developeri</a>
+    <hr>
+    <a href="{% url 'web_page:list_applicants' %}">Lista aplicanti</a>
 </div>
 
 {% endblock content %}
