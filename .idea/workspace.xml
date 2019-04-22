@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="5d94a102-7ef2-400b-aa5d-f9e45860c073" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pagina_web/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pagina_web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pagina_web/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/applicant_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pagina_web/templates/applicant_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/application_enrollment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pagina_web/templates/application_enrollment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/developer_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pagina_web/templates/developer_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/emails/email_application_enrollment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pagina_web/templates/emails/email_application_enrollment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pagina_web/templates/home_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pagina_web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pagina_web/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/list_applicants.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pagina_web/templates/list_applicants.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pagina_web/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pagina_web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pagina_web/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,52 +22,82 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/emails/email_application_enrollment.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pagina_web/utils.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pagina_web/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/platforma_web/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="150" column="7" selection-start-line="150" selection-start-column="7" selection-end-line="150" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pagina_web/models.py">
+        <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/applicant_details.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="780">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+              <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/applicant_details.html">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/application_enrollment.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/developer_details.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="84" selection-start-line="3" selection-start-column="84" selection-end-line="3" selection-end-column="84" />
+              <caret line="3" column="114" selection-start-line="3" selection-start-column="114" selection-end-line="3" selection-end-column="114" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/emails/email_applicant_accepted.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="19" lean-forward="true" selection-start-line="1" selection-end-line="15" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/emails/email_applicant_rejected.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="19" lean-forward="true" selection-start-line="1" selection-end-line="9" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/emails/email_application_enrollment.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/list_applicants.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pagina_web/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pagina_web/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
             </state>
           </provider>
         </entry>
@@ -70,25 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/home_page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/list_applicants.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pagina_web/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="660">
+              <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -102,19 +120,23 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/pagina_web/templates/pagina_prezentare.html" />
-        <option value="$PROJECT_DIR$/src/pagina_web/admin.py" />
         <option value="$PROJECT_DIR$/src/pagina_web/templates/principal_page.html" />
         <option value="$PROJECT_DIR$/src/requirements.txt" />
         <option value="$PROJECT_DIR$/src/static/css/main.css" />
         <option value="$PROJECT_DIR$/src/templates/base.html" />
         <option value="$PROJECT_DIR$/src/platforma_web/urls.py" />
         <option value="$PROJECT_DIR$/src/pagina_web/forms.py" />
-        <option value="$PROJECT_DIR$/src/pagina_web/templates/application_enrollment.html" />
-        <option value="$PROJECT_DIR$/src/platforma_web/settings.py" />
-        <option value="$PROJECT_DIR$/src/pagina_web/models.py" />
-        <option value="$PROJECT_DIR$/src/pagina_web/templates/developer_details.html" />
-        <option value="$PROJECT_DIR$/src/pagina_web/templates/home_page.html" />
         <option value="$PROJECT_DIR$/src/pagina_web/urls.py" />
+        <option value="$PROJECT_DIR$/src/platforma_web/settings.py" />
+        <option value="$PROJECT_DIR$/src/pagina_web/admin.py" />
+        <option value="$PROJECT_DIR$/src/pagina_web/models.py" />
+        <option value="$PROJECT_DIR$/src/pagina_web/templates/applicant_details.html" />
+        <option value="$PROJECT_DIR$/src/pagina_web/templates/application_enrollment.html" />
+        <option value="$PROJECT_DIR$/src/pagina_web/templates/developer_details.html" />
+        <option value="$PROJECT_DIR$/src/pagina_web/templates/emails/email_application_enrollment.html" />
+        <option value="$PROJECT_DIR$/src/pagina_web/templates/home_page.html" />
+        <option value="$PROJECT_DIR$/src/pagina_web/templates/list_applicants.html" />
+        <option value="$PROJECT_DIR$/src/pagina_web/utils.py" />
         <option value="$PROJECT_DIR$/src/pagina_web/views.py" />
       </list>
     </option>
@@ -174,18 +196,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pagina_web/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pagina_web/templates/emails" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/pagina_web" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/pagina_web/templates" />
+      <recent name="$PROJECT_DIR$/src/pagina_web/templates/emails" />
       <recent name="$PROJECT_DIR$/src/pagina_web/migrations" />
+      <recent name="$PROJECT_DIR$/src/pagina_web/templates" />
       <recent name="$PROJECT_DIR$/src/pagina_web" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -260,13 +282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pagina_web/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pagina_web/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-74" />
@@ -315,53 +330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/application_enrollment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/emails/email_application_enrollment.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pagina_web/utils.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/platforma_web/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="150" column="7" selection-start-line="150" selection-start-column="7" selection-end-line="150" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pagina_web/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/applicant_details.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/developer_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="84" selection-start-line="3" selection-start-column="84" selection-end-line="3" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/home_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/list_applicants.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pagina_web/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
@@ -372,10 +340,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/platforma_web/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="150" column="7" selection-start-line="150" selection-start-column="7" selection-end-line="150" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pagina_web/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pagina_web/migrations/0004_auto_20180511_1603.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pagina_web/migrations/0005_applicationenrollment_date_applied.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pagina_web/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/applicant_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/application_enrollment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/developer_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="114" selection-start-line="3" selection-start-column="114" selection-end-line="3" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/emails/email_applicant_accepted.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="1" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/emails/email_applicant_rejected.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="1" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/emails/email_application_enrollment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/home_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/list_applicants.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pagina_web/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pagina_web/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="294">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
     </entry>

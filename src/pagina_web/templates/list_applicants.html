@@ -6,7 +6,7 @@
 
 {% block title %}Application{% endblock %}
 {% block add-nav %}
-<li><a href=""><span class="glyphicon glyphicon-user"></span> Web Page</a></li></li>
+<li><a href="{% url 'web_page:home_page' %}"><span class="glyphicon glyphicon-home"></span> Web Page</a></li></li>
 {% endblock %}
 {% block content %}
 <br>
@@ -20,12 +20,12 @@
         <center> Lista aplicanti</center>
     </h1>
     <hr>
-    <div class="col-sm-6 text-left">
+    <div class="col-sm-8 text-left">
         <ol>
             {% for obj in object_list %}
             <li><a href='{{ obj.get_absolute_url }}'> {{ obj.first_name }} {{ obj.last_name}}</a><br/>
                 {{ obj.first_name }} | {{ obj.last_name}} | {{ obj.email }} | {{ obj.faculty}}| {{ obj.specialization}}
-                | {{obj.year_of_study}}
+                | {{obj.year_of_study}}| {{ obj.date_applied }}| {{obj.get_status_display}}
             </li>
             {% empty %}
             {% endfor %}

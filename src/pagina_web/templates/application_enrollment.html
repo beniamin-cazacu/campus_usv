@@ -6,6 +6,7 @@
 
 {% block title %}Application{% endblock %}
 {% block add-nav %}
+<li><a href="{% url 'web_page:home_page' %}"><span class="glyphicon glyphicon-home"></span> Web Page</a></li></li>
 {% endblock %}
 {% block content %}
 <br>
@@ -25,15 +26,6 @@
             <input type="submit" class="btn btn-primary" value="Submit"/>
         </form>
         <hr>
-        {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li
-                    {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
-            </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
     </div>
 </div>
 

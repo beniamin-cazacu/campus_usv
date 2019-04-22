@@ -6,7 +6,7 @@
 
 {% block title %}Principal{% endblock %}
 {% block add-nav %}
-<li><a href=""><span class="glyphicon glyphicon-user"></span> Web Page</a></li></li>
+<li><a href="#"><span class="glyphicon glyphicon-home"></span> Web Page</a></li></li>
 {% endblock %}
 {% block content %}
 <br>
@@ -30,6 +30,16 @@
     <a href="{% url 'web_page:developers_details' %}">Prezentare developeri</a>
     <hr>
     <a href="{% url 'web_page:list_applicants' %}">Lista aplicanti</a>
+    <hr>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li
+                {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
 </div>
 
 {% endblock content %}
