@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<!--<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">-->
+{% endblock %}
+
+{% block title %}Application{% endblock %}
+{% block add-nav %}
+<li><a href="{% url 'web_page:home_page' %}"><span class="glyphicon glyphicon-home"></span> Web Page</a></li></li>
+{% endblock %}
+{% block content %}
+<br>
+<br>
+<br>
+
+<div class='row'>
+
+
+    <h1>
+        <center> Detalii aplicant</center>
+    </h1>
+    <hr>
+    <div class="col-sm-6 text-left">
+        <a href="{% url 'web_page:list_applicants' %}">Lista aplicanti</a>
+        <hr>
+        <strong>
+            Nume student: {{ object.first_name }} {{ object.last_name}} <br>
+            Email: {{ object.email }} <br>
+            Data nasterii: {{ object.birth_date }} <br>
+            Tip studii:{{ object.study_type }} <br>
+            Facultate: {{ object.faculty}}<br>
+            Specializare: {{ object.specialization }}<br>
+            Anul de studiu: {{ object.year_of_study }}<br>
+            Motivatie: {{ object.motivation }}<br>
+            Status: {{object.get_status_display}}
+        </strong>
+        <hr>
+        {% if object.status == '0' %}
+        <a href="{% url 'web_page:response_application' object.id 1 %}">
+            <button type="button" class="btn btn-primary">Accepta</button>
+        </a>
+        <a href="{% url 'web_page:response_application' object.id 0 %}">
+            <button type="button" class="btn btn-danger">Respinge</button>
+        </a>
+        {% else %}
+        <a href="{% url 'web_page:response_application' object.id 1 %}">
+            <button type="button" class="btn btn-primary">Accepta</button>
+        </a>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock content %}

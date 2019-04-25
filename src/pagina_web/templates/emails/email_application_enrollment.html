@@ -1,0 +1,10 @@
+{% autoescape off %}
+
+Buna ziua!
+
+Studentul cu nume {{first_name}} {{last_name}} doreste sa devina student reprezentant.
+
+In linkul urmator sunt mai multe detalii despre student si puteti accepta sau repinge solicitarea:
+http://{{ domain }}{% url 'web_page:applicant_details' student_id %}
+
+{% endautoescape %}

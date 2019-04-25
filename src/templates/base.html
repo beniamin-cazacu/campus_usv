@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> {% block title %}Assisted{% endblock %}</title>
+    <title> {% block title %}{% endblock %}</title>
 
     {% load staticfiles %}
 
@@ -26,7 +26,7 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-
+        
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 {% block add-nav %}

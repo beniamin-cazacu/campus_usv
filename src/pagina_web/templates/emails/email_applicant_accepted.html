@@ -1,0 +1,16 @@
+{% autoescape off %}
+
+Buna ziua, {{first_name}} {{last_name}}!
+
+Felicitari, ai fost acceptat ca student reprezentat.
+
+Poti folosi urmatoarele credentiale pentru a te autentifica:
+email : {{email}}
+password : {{password}}
+
+Puteti sa va autentificati aici:
+http://{{ domain }}{% url 'web_page:login' %}
+
+Multumim! O zi buna!
+
+{% endautoescape %}

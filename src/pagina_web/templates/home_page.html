@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+{% endblock %}
+
+{% block title %}Principal{% endblock %}
+{% block add-nav %}
+<li><a href="#"><span class="glyphicon glyphicon-home"></span> Web Page</a></li></li>
+{% endblock %}
+{% block content %}
+<br>
+<br>
+<br>
+
+<div class='row'>
+    <h1>
+        {% if user.is_authenticated %}
+        <p>Welcome, {{ user.get_username }}. Thanks for logging in.</p>
+        {% else %}
+        <p>Welcome, new user. Please log in.</p>
+        {% endif %}
+        <a href="{% url 'web_page:logout' %}"> Log out</a>
+    </h1>
+    <hr>
+    <a href="{% url 'web_page:login' %}">Login</a>
+    <hr>
+    <a href="{% url 'web_page:application_enrollment' %}">Cerere inscriere</a>
+    <hr>
+    <a href="{% url 'web_page:developers_details' %}">Prezentare developeri</a>
+    <hr>
+    <a href="{% url 'web_page:list_applicants' %}">Lista aplicanti</a>
+    <hr>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li
+                {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+
+{% endblock content %}
