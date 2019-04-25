@@ -17,19 +17,27 @@
     <h1>
         {% if user.is_authenticated %}
         <p>Welcome, {{ user.get_username }}. Thanks for logging in.</p>
+        <a href="{% url 'web_page:logout' %}"> Log out</a>
         {% else %}
         <p>Welcome, new user. Please log in.</p>
         {% endif %}
-        <a href="{% url 'web_page:logout' %}"> Log out</a>
+
     </h1>
+    {% if user.is_authenticated %}
+    <hr>
+    <a href="{% url 'web_page:change_password' %}">Change password</a>
+    <hr>
+    <a href="{% url 'web_page:list_applicants' %}">Lista aplicanti</a>
+    {% endif %}
     <hr>
     <a href="{% url 'web_page:login' %}">Login</a>
     <hr>
     <a href="{% url 'web_page:application_enrollment' %}">Cerere inscriere</a>
     <hr>
     <a href="{% url 'web_page:developers_details' %}">Prezentare developeri</a>
+
     <hr>
-    <a href="{% url 'web_page:list_applicants' %}">Lista aplicanti</a>
+    <a href="{% url 'web_page:faq_categories' %}">FAQ</a>
     <hr>
     {% if messages %}
     <ul class="messages">

@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django.contrib import admin
 
 # Register your models here.
-from pagina_web.models import Profile, ApplicationEnrollment, User
+from pagina_web.models import Profile, ApplicationEnrollment, User, FaqCategory, FrequentlyAskedQuestions
 
 
 class UsersAdmin(admin.ModelAdmin):
@@ -27,3 +27,12 @@ class ApplicationEnrollmentAdmin(admin.ModelAdmin):
 
 
 admin.site.register(ApplicationEnrollment, ApplicationEnrollmentAdmin)
+
+admin.site.register(FaqCategory)
+
+
+class FAQAdmin(admin.ModelAdmin):
+    list_display = ('faq_category', 'question')
+
+
+admin.site.register(FrequentlyAskedQuestions, FAQAdmin)

@@ -120,4 +120,23 @@ class ApplicationEnrollment(models.Model):
         return self.email
 
     def get_absolute_url(self):
-        return reverse('web_page:applicant_details', kwargs={'pk': self.id})
+        return reverse('web_page:applicant_details', kwargs={'pk': self.pk})
+
+
+class FaqCategory(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('web_page:frequently_asked_questions', kwargs={'pk': self.pk})
+
+
+class FrequentlyAskedQuestions(models.Model):
+    faq_category = models.ForeignKey(FaqCategory, on_delete=models.CASCADE)
+    question = models.TextField(max_length=500, blank=True)
+    answer = models.TextField(max_length=500, blank=True)
+
+    def __str__(self):
+        return self.faq_category.name
