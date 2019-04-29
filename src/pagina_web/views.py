@@ -9,7 +9,7 @@ from django.shortcuts import redirect, render, get_object_or_404
 from django.views.generic import TemplateView, FormView, ListView, DetailView
 
 from pagina_web.forms import ApplicationEnrollmentForm, FrequentlyAskedQuestionsForm
-from pagina_web.models import ApplicationEnrollment, FaqCategory, FrequentlyAskedQuestions
+from pagina_web.models import ApplicationEnrollment, FaqCategory, FrequentlyAskedQuestions, User
 from pagina_web.utils import send_email_application_enrollement, register_new_student, student_rejected
 
 
@@ -19,6 +19,16 @@ def redirect_home(request):
 
 class AboutView(TemplateView):
     template_name = "developers_details.html"
+
+
+class UserProfileView(TemplateView):
+    template_name = "user_profile.html"
+    model = User
+
+    def get_context_data(self, **kwargs):
+        context = super(UserProfileView, self).get_context_data(**kwargs)
+        context['object'] = self.model.objects.get(pk=self.request.user.id)
+        return context
 
 
 class HomePageView(TemplateView):
@@ -85,7 +95,7 @@ def change_password(request):
             user = form.save()
             update_session_auth_hash(request, user)  # Important!
             messages.success(request, 'Your password was successfully updated!')
-            return redirect('change_password')
+            return redirect('web_page:login')
         else:
             messages.error(request, 'Please correct the error below.')
     else:
@@ -110,6 +120,11 @@ class FrequentlyAskedQuestionsView(ListView):
     def get_queryset(self):
         query = self.model.objects.filter(faq_category=self.kwargs.get('pk'))
         return query
+
+    def get_context_data(self, **kwargs):
+        context = super(FrequentlyAskedQuestionsView, self).get_context_data(**kwargs)
+        context['category_pk'] = self.kwargs.get('pk')
+        return context
 
 
 def edit_faq(request, pk):
@@ -142,7 +157,8 @@ class AddFAQView(FormView):
     form_class = FrequentlyAskedQuestionsForm
 
     def form_valid(self, form):
-        form.save()
-        form.save()
+        faq = form.save(commit=False)
+        faq.faq_category_id = self.kwargs.get('pk')
+        faq.save()
         messages.success(self.request, 'Successfully added.')
-        return redirect('web_page:faq_categories')
+        return redirect('web_page:frequently_asked_questions', pk=self.kwargs.get('pk'))

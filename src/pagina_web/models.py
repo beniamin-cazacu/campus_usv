@@ -77,7 +77,11 @@ class User(AbstractBaseUser, PermissionsMixin):
         return self.email
 
     def get_full_name(self):
-        return self.email
+        """
+        Returns the first_name plus the last_name, with a space in between.
+        """
+        full_name = '%s %s' % (self.first_name, self.last_name)
+        return full_name.strip()
 
     def get_short_name(self):
         return self.email
@@ -85,11 +89,20 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    avatar = models.ImageField(upload_to='avatar/', default='avatar/original.jpg', blank=True)
     birth_date = models.DateField(null=True, blank=True)
     study_type = models.CharField(max_length=10, choices=Study_Type)
     faculty = models.CharField(max_length=250, blank=True)
     specialization = models.CharField(max_length=250, blank=True)
     year_of_study = models.CharField(max_length=10, choices=Year_Study)
+    country = models.CharField(max_length=250, blank=True)
+    county = models.CharField(max_length=250, blank=True)
+    city = models.CharField(max_length=250, blank=True)
+    nationality = models.CharField(max_length=250, blank=True)
+
+    def get_address(self):
+        address = '%s, %s' % (self.country, self.city)
+        return address.strip()
 
 
 @receiver(post_save, sender=User)
@@ -107,13 +120,17 @@ class ApplicationEnrollment(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     email = models.EmailField()
-    birth_date = models.DateField(null=True, blank=True)
+    birth_date = models.DateField(null=True)
     study_type = models.CharField(max_length=10, choices=Study_Type)
-    faculty = models.CharField(max_length=250, blank=True)
-    specialization = models.CharField(max_length=250, blank=True)
+    faculty = models.CharField(max_length=250)
+    specialization = models.CharField(max_length=250)
     year_of_study = models.CharField(max_length=10, choices=Year_Study)
-    motivation = models.TextField(max_length=500, blank=True)
+    motivation = models.TextField(max_length=500)
     status = models.CharField(max_length=10, choices=Status_Type, default='0')
+    country = models.CharField(max_length=250, blank=True)
+    county = models.CharField(max_length=250)
+    city = models.CharField(max_length=250)
+    nationality = models.CharField(max_length=250)
     date_applied = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -121,6 +138,10 @@ class ApplicationEnrollment(models.Model):
 
     def get_absolute_url(self):
         return reverse('web_page:applicant_details', kwargs={'pk': self.pk})
+
+    def get_address(self):
+        address = '%s, %s, %s' % (self.country, self.county, self.city)
+        return address.strip()
 
 
 class FaqCategory(models.Model):

@@ -19,13 +19,6 @@
     <h1>
         <center> List FAQ category</center>
     </h1>
-
-    {% if user.is_authenticated %}
-    <hr>
-    <a href="{% url 'web_page:add_faq' %}">
-        <span class="glyphicon glyphicon-plus">Add</span>
-    </a>
-    {% endif %}
     <hr>
     <div class="col-sm-8 text-left">
         <ol>

@@ -15,7 +15,7 @@ admin.site.register(User, UsersAdmin)
 
 
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'birth_date', 'study_type', 'faculty', 'specialization', 'year_of_study')
+    list_display = ('user', 'avatar', 'birth_date', 'study_type', 'faculty', 'specialization', 'year_of_study')
 
 
 admin.site.register(Profile, ProfileAdmin)

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
-<!--<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">-->
+<link rel="stylesheet" type="text/css" href="{% static 'css/aplicant_details.css' %}">
 {% endblock %}
 
 {% block title %}Application{% endblock %}
@@ -13,40 +13,126 @@
 <br>
 <br>
 
-<div class='row'>
-
-
-    <h1>
-        <center> Detalii aplicant</center>
-    </h1>
-    <hr>
-    <div class="col-sm-6 text-left">
-        <a href="{% url 'web_page:list_applicants' %}">Lista aplicanti</a>
-        <hr>
-        <strong>
-            Nume student: {{ object.first_name }} {{ object.last_name}} <br>
-            Email: {{ object.email }} <br>
-            Data nasterii: {{ object.birth_date }} <br>
-            Tip studii:{{ object.study_type }} <br>
-            Facultate: {{ object.faculty}}<br>
-            Specializare: {{ object.specialization }}<br>
-            Anul de studiu: {{ object.year_of_study }}<br>
-            Motivatie: {{ object.motivation }}<br>
-            Status: {{object.get_status_display}}
-        </strong>
-        <hr>
-        {% if object.status == '0' %}
-        <a href="{% url 'web_page:response_application' object.id 1 %}">
-            <button type="button" class="btn btn-primary">Accepta</button>
-        </a>
-        <a href="{% url 'web_page:response_application' object.id 0 %}">
-            <button type="button" class="btn btn-danger">Respinge</button>
-        </a>
-        {% else %}
-        <a href="{% url 'web_page:response_application' object.id 1 %}">
-            <button type="button" class="btn btn-primary">Accepta</button>
-        </a>
-        {% endif %}
+<div class="container">
+    <div class="row profile">
+        <div class="col-md-12 ">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>
+                        <center>Detalii aplicant</center>
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <div class="box box-info">
+                        <div class="box-body">
+                            <div class="col-md-4">
+                                <div class="profile-sidebar">
+                                    <div class="profile-userpic">
+                                        <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg"
+                                             class="img-responsive" alt="">
+                                    </div>
+                                    <div class="profile-usertitle">
+                                        <div class="profile-usertitle-name">
+                                            {{ object.first_name }} {{ object.last_name}}
+                                        </div>
+                                        <div class="profile-usertitle-job">
+                                            {{ object.email }}
+                                        </div>
+                                    </div>
+                                    <div class="profile-userbuttons">
+                                        {% if object.status == '0' %}
+                                        <a href="{% url 'web_page:response_application' object.id 1 %}">
+                                            <button type="button" class="btn btn-primary">Accepta</button>
+                                        </a>
+                                        <a href="{% url 'web_page:response_application' object.id 0 %}">
+                                            <button type="button" class="btn btn-danger">Respinge</button>
+                                        </a>
+                                        {% else %}
+                                        <a href="{% url 'web_page:response_application' object.id 1 %}">
+                                            <button type="button" class="btn btn-primary">Accepta</button>
+                                        </a>
+                                        {% endif %}
+                                    </div>
+                                    <div class="profile-usermenu">
+                                        <ul class="nav">
+                                            <li class="active">
+                                                <a href="#">
+                                                    {% if object.get_status_display == 'wait' %}
+                                                    <i class="glyphicon glyphicon-time"></i>
+                                                    {{ object.get_status_display }}
+                                                    {% else %}
+                                                    <i class="glyphicon glyphicon-thumbs-down"></i>
+                                                    {{ object.get_status_display }}
+                                                    {% endif %}
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="glyphicon glyphicon-map-marker"></i>
+                                                    {{object.get_address}} </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="glyphicon glyphicon-gift"></i>
+                                                    {{ object.birth_date }} </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="glyphicon glyphicon-flag"></i>
+                                                    {{ object.nationality }} </a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url 'web_page:list_applicants' %}">
+                                                    <i class="glyphicon glyphicon-list-alt"></i>
+                                                    Lista aplicanti </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" align="center">
+                                <div class="profile-content">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <hr>
+                                    <strong>
+                                        <ul class="nav">
+                                            <li>
+                                                <a href="#">
+                                                    Tip studii: {{ object.study_type }}
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Facultate: {{ object.faculty}}
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Specializare: {{ object.specialization }}
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Anul de studiu: {{ object.year_of_study }}
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    Motivatie: {{ object.motivation }}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

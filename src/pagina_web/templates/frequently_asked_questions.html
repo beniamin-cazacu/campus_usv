@@ -15,11 +15,11 @@
 
 <div class='row'>
 
-
     <h1>
         <center> Frequently Asked Questions</center>
     </h1>
     <hr>
+
     <div class="col-sm-6 text-left">
         <form>
             <div class="input-group">
@@ -31,6 +31,12 @@
                 </div>
             </div>
         </form>
+        {% if user.is_authenticated %}
+        <hr>
+        <a href="{% url 'web_page:add_faq'  category_pk %}">
+            <span class="label label-primary glyphicon glyphicon-plus"> Add</span>
+        </a>
+        {% endif %}
         <hr>
         <strong>
             {% for obj in object_list %}
@@ -51,7 +57,11 @@
                             <h5><span class="label label-primary">Answer</span></h5>
                             <p>{{obj.answer}}</p>
                             {% if user.is_authenticated %}
-                            <a href="{% url 'web_page:delete_faq' obj.pk %}">
+                            <!--<a href="{% url 'web_page:delete_faq' obj.pk %}">-->
+                            <!--<span class="glyphicon glyphicon-trash"></span>-->
+                            <!--</a>-->
+
+                            <a href="" data-toggle="modal" data-target="#myModal{{obj.pk}}">
                                 <span class="glyphicon glyphicon-trash"></span>
                             </a>
                             <a href="{% url 'web_page:edit_faq' obj.pk %}">
@@ -63,6 +73,27 @@
                 </div>
             </div>
 
+            <!--// modal-->
+            <div class="modal fade" id="myModal{{obj.pk}}" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">{{ obj.question }}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Esti sigur ca doresti sa stergi aceasta intrebare ?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{% url 'web_page:delete_faq' obj.pk %}">
+                                <button type="button" class="btn btn-primary">Sunt sigur</button>
+                            </a>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Inchide</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {% empty %}
             {% endfor %}
 

@@ -26,7 +26,7 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-        
+
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 {% block add-nav %}
@@ -34,6 +34,12 @@
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'web_page:user_profile' %}"><span class="glyphicon glyphicon-user"></span>
+                    {{ user.get_username }}</a></li>
+                {% else %}
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                {% endif %}
                 {% block add %}
                 {% endblock %}
             </ul>
