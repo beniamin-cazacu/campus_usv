@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/user_profile.css' %}">
+{% endblock %}
+
+{% block title %}Application{% endblock %}
+{% block add-nav %}
+{% endblock %}
+{% block content %}
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h4>User Profile</h4></div>
+                <div class="panel-body">
+
+                    <div class="box box-info">
+
+                        <div class="box-body">
+                            <div class="col-sm-6">
+                                <div align="center">
+                                    {% if object.profile.avatar %}
+                                    <img alt="User Pic"
+                                         src="{{object.profile.avatar.url}}"
+                                         id="profile-image1" class="img-circle img-responsive">
+                                    {% else %}
+
+                                    <img alt="User Pic"
+                                         src="{% static 'media/avatar/original.jpg' %}"
+                                         id="profile-image" class="img-circle img-responsive"
+                                         width="150px;" height="150px;">
+                                    {% endif %}
+                                </div>
+                                <br>
+                                <!-- /input-group -->
+                            </div>
+                            <div class="col-sm-6">
+                                <h4 style="color:#00b1b1;">{{object.get_full_name}}</h4></span>
+                                <small><cite title="San Francisco, USA"> {{ object.profile.get_address }} <i
+                                        class="glyphicon glyphicon-map-marker">
+                                </i></cite></small>
+                                <p>
+                                    <i class="glyphicon glyphicon-envelope"></i> {{object.email}}
+                                    <br/>
+                                    <i class="glyphicon glyphicon-gift"></i> {{object.profile.birth_date|date:'d-m-Y' }}
+                                </p>
+                            </div>
+                            <div class="clearfix"></div>
+                            <hr style="margin:5px 0 5px 0;">
+                            <br>
+                            <div class="col-sm-6">
+                                <form method="post">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <input type="submit" class="btn btn-primary" value="Submit"/>
+                                </form>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script>
+        </script>
+    </div>
+</div>
+
+{% endblock content %}

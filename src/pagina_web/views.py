@@ -8,8 +8,9 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.shortcuts import redirect, render, get_object_or_404
 from django.views.generic import TemplateView, FormView, ListView, DetailView
 
-from pagina_web.forms import ApplicationEnrollmentForm, FrequentlyAskedQuestionsForm
-from pagina_web.models import ApplicationEnrollment, FaqCategory, FrequentlyAskedQuestions, User
+from pagina_web.forms import ApplicationEnrollmentForm, FrequentlyAskedQuestionsForm, UserProfileForm, \
+    UserPhotoProfileForm
+from pagina_web.models import ApplicationEnrollment, FaqCategory, FrequentlyAskedQuestions, User, Profile
 from pagina_web.utils import send_email_application_enrollement, register_new_student, student_rejected
 
 
@@ -162,3 +163,41 @@ class AddFAQView(FormView):
         faq.save()
         messages.success(self.request, 'Successfully added.')
         return redirect('web_page:frequently_asked_questions', pk=self.kwargs.get('pk'))
+
+
+def edit_user_profile(request):
+    user = get_object_or_404(Profile, id=request.user.pk)
+
+    if request.method == "POST":
+        form = UserProfileForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect('web_page:user_profile')
+    else:
+        form = UserProfileForm(instance=user)
+    template = "edit_user_profile.html"
+    user = User.objects.get(pk=request.user.id)
+    context = {
+        'form': form,
+        'object': user
+    }
+    return render(request, template, context)
+
+
+def edit_user_photo_profile(request):
+    user = get_object_or_404(Profile, id=request.user.pk)
+    if request.method == "POST":
+        form = UserPhotoProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            user.avatar = form.cleaned_data["avatar"]
+            user.save()
+            return redirect('web_page:user_profile')
+    else:
+        form = UserPhotoProfileForm()
+    template = "edit_user_photo_profile.html"
+    user = User.objects.get(pk=request.user.id)
+    context = {
+        'form': form,
+        'object': user
+    }
+    return render(request, template, context)

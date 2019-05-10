@@ -6,7 +6,6 @@
 
 {% block title %}Application{% endblock %}
 {% block add-nav %}
-<li><a href="{% url 'web_page:home_page' %}"><span class="glyphicon glyphicon-home"></span> Web Page</a></li></li>
 {% endblock %}
 {% block content %}
 <br>
@@ -54,7 +53,6 @@
 
                     <div id="question{{obj.id}}" class="panel-collapse collapse" style="height: 0px;">
                         <div class="panel-body">
-                            <h5><span class="label label-primary">Answer</span></h5>
                             <p>{{obj.answer}}</p>
                             {% if user.is_authenticated %}
                             <!--<a href="{% url 'web_page:delete_faq' obj.pk %}">-->

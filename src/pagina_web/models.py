@@ -63,7 +63,7 @@ class MyUserManager(BaseUserManager):
 class User(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=254, blank=True)
     last_name = models.CharField(max_length=254, blank=True)
-    email = models.EmailField(blank=True, unique=True)
+    email = models.EmailField(unique=True)
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now())
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
@@ -119,7 +119,7 @@ def save_user_profile(sender, instance, **kwargs):
 class ApplicationEnrollment(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     birth_date = models.DateField(null=True)
     study_type = models.CharField(max_length=10, choices=Study_Type)
     faculty = models.CharField(max_length=250)

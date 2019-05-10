@@ -6,7 +6,6 @@
 
 {% block title %}Application{% endblock %}
 {% block add-nav %}
-<li><a href="{% url 'web_page:home_page' %}"><span class="glyphicon glyphicon-home"></span> Web Page</a></li></li>
 {% endblock %}
 {% block content %}
 <br>
@@ -24,13 +23,21 @@
                         <div class="box-body">
                             <div class="col-sm-6">
                                 <div align="center">
-                                    <img alt="User Pic"
-                                         src="{{object.profile.avatar.url}}"
-                                         id="profile-image1" class="img-circle img-responsive">
 
-                                    <input id="profile-image-upload" class="hidden" type="file">
+                                    <a href="{% url 'web_page:edit_user_photo_profile' %}" id="profile-image-upload">
+                                        {% if object.profile.avatar %}
+                                        <img alt="User Pic"
+                                             src="{{object.profile.avatar.url}}"
+                                             id="profile-image1" class="img-circle img-responsive">
+                                        {% else %}
+
+                                        <img alt="User Pic"
+                                             src="{% static 'media/avatar/original.jpg' %}"
+                                             id="profile-image" class="img-circle img-responsive"
+                                             width="150px;" height="150px;">
+                                        {% endif %}
+                                    </a>
                                     <div style="color:#999;">click here to change profile image</div>
-                                    <!--Upload Image Js And Css-->
                                 </div>
                                 <br>
                                 <!-- /input-group -->
@@ -45,6 +52,11 @@
                                     <br/>
                                     <i class="glyphicon glyphicon-gift"></i> {{object.profile.birth_date|date:'d-m-Y' }}
                                 </p>
+                                <a href="{% url 'web_page:edit_user_profile' %}"
+                                   class="btn btn-primary a-btn-slide-text">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                    <span><strong>Edit profile</strong></span>
+                                </a>
                             </div>
                             <div class="clearfix"></div>
                             <hr style="margin:5px 0 5px 0;">
@@ -70,7 +82,7 @@
                             <div class="bot-border"></div>
 
                             <div class="col-sm-5 col-xs-6 tital ">Tip studiu:</div>
-                            <div class="col-sm-7"> {{object.profile.study_type}}</div>
+                            <div class="col-sm-7"> {{object.profile.get_study_type_display}}</div>
                             <div class="clearfix"></div>
                             <div class="bot-border"></div>
 
@@ -85,7 +97,7 @@
                             <div class="bot-border"></div>
 
                             <div class="col-sm-5 col-xs-6 tital ">An de studiu:</div>
-                            <div class="col-sm-7"> {{object.profile.year_of_study}}</div>
+                            <div class="col-sm-7"> {{object.profile.get_year_of_study_display}}</div>
                             <div class="clearfix"></div>
                             <div class="bot-border"></div>
 
@@ -101,8 +113,10 @@
                 </div>
             </div>
         </div>
-        <script>
-              $(function() {
+    </div>
+</div>
+<script>
+$(function() {
     $('#profile-image1').on('click', function() {
         $('#profile-image-upload').click();
     });
@@ -112,18 +126,5 @@
 
 
 
-
-
-
-
-
-
-
-
-
-        </script>
-
-    </div>
-</div>
-
+</script>
 {% endblock content %}

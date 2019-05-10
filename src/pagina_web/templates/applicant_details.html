@@ -6,7 +6,6 @@
 
 {% block title %}Application{% endblock %}
 {% block add-nav %}
-<li><a href="{% url 'web_page:home_page' %}"><span class="glyphicon glyphicon-home"></span> Web Page</a></li></li>
 {% endblock %}
 {% block content %}
 <br>
@@ -74,7 +73,7 @@
                                             <li>
                                                 <a href="#">
                                                     <i class="glyphicon glyphicon-gift"></i>
-                                                    {{ object.birth_date }} </a>
+                                                    {{ object.birth_date|date:'d-m-Y' }} </a>
                                             </li>
                                             <li>
                                                 <a href="#">
@@ -101,7 +100,7 @@
                                         <ul class="nav">
                                             <li>
                                                 <a href="#">
-                                                    Tip studii: {{ object.study_type }}
+                                                    Tip studii: {{ object.get_study_type_display }}
                                                 </a>
                                             </li>
                                             <li>
@@ -116,7 +115,7 @@
                                             </li>
                                             <li>
                                                 <a href="#">
-                                                    Anul de studiu: {{ object.year_of_study }}
+                                                    Anul de studiu: {{ object.get_year_of_study_display }}
                                                 </a>
                                             </li>
                                             <li>
