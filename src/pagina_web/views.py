@@ -35,6 +35,12 @@ class UserProfileView(TemplateView):
 class HomePageView(TemplateView):
     template_name = "home_page.html"
 
+    def get_context_data(self, **kwargs):
+        users = User.objects.all()
+        context = super(HomePageView, self).get_context_data(**kwargs)
+        context['students'] = users
+        return context
+
 
 class ApplicationEnrollmentView(FormView):
     template_name = "application_enrollment.html"

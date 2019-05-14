@@ -15,11 +15,13 @@
     <div class="row">
         <div class="col-md-12 ">
             <div class="panel panel-default">
-                <div class="panel-heading"><h4>User Profile</h4></div>
+                <div class="panel-heading">
+                    <div class="about-agileits-title">
+                        <h3>User Profile</h3>
+                    </div>
+                </div>
                 <div class="panel-body">
-
                     <div class="box box-info">
-
                         <div class="box-body">
                             <div class="col-sm-6">
                                 <div align="center">
@@ -56,6 +58,11 @@
                                    class="btn btn-primary a-btn-slide-text">
                                     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
                                     <span><strong>Edit profile</strong></span>
+                                </a>
+                                <a href="{% url 'web_page:change_password' %}"
+                                   class="btn btn-primary a-btn-slide-text">
+                                    <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                                    <span><strong>Change password</strong></span>
                                 </a>
                             </div>
                             <div class="clearfix"></div>
@@ -121,6 +128,12 @@ $(function() {
         $('#profile-image-upload').click();
     });
 });
+
+
+
+
+
+
 
 
 

@@ -65,6 +65,7 @@ def student_rejected(student, domain):
 
 def save_profile(user, student):
     user = User.objects.get(pk=user)
+    user.profile.avatar = student.avatar
     user.profile.birth_date = student.birth_date
     user.profile.study_type = student.study_type
     user.profile.country = student.country

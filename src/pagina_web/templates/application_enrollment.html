@@ -11,21 +11,33 @@
 <br>
 <br>
 <br>
-
-<div class='row'>
-
-    <h1>
-        <center>Cerere student reprezentant</center>
-    </h1>
-    <hr>
-    <div class="col-sm-6 text-left">
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" class="btn btn-primary" value="Submit"/>
-        </form>
-        <hr>
+<div class="container">
+    <div class='row'>
+        <div class="col-md-12 ">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="about-agileits-title">
+                        <h3>Cerere student reprezentant</h3>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="box box-info">
+                        <div class="box-body">
+                            <div class="col-sm-7 text-left">
+                                <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <br>
+                                    <input type="submit" class="btn btn-primary pull-right" value="Submit"/>
+                                </form>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
+</div>
 {% endblock content %}

@@ -2,6 +2,10 @@
 {% load static %}
 {% block head %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 {% endblock %}
 
 {% block title %}Principal{% endblock %}
@@ -14,39 +18,30 @@
 {% endif %}
 {% endblock %}
 {% block content %}
-<!--<br>-->
-<!--<br>-->
-<!--<br>-->
-
-<!--<div class='row'>-->
-<!--{% if user.is_authenticated %}-->
-<!--<hr>-->
-<!--<a href="{% url 'web_page:change_password' %}">Change password</a>-->
-<!--<hr>-->
-<!--<a href="{% url 'web_page:list_applicants' %}">Lista aplicanti</a>-->
-<!--{% endif %}-->
 
 <div class="banner">
     <div class="container">
+        <br>
         <h3>Educația este cheia pentru a debloca ușa de aur a libertății</h3>
         <div class="col-xs-4 col-md-offset-4">
             <hr>
         </div>
+        <br>
         <div class="wthree_banner_grids">
+            {% if user.is_authenticated %}
+            <a href="{% url 'web_page:list_applicants' %}"
+               class="btn btn-primary a-btn-slide-text btn-lg">
+                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                <span><strong>Listă aplicanţi</strong></span>
+            </a>
+            {% else %}
+            <a href="{% url 'web_page:application_enrollment' %}"
+               class="btn btn-primary a-btn-slide-text btn-lg" style="background-color:rgba(0, 119, 255, 0.534)">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                <span><strong>Cerere înscriere</strong></span>
+            </a>
+            {% endif %}
         </div>
-        {% if user.is_authenticated %}
-        <a href="{% url 'web_page:list_applicants' %}"
-           class="btn btn-primary a-btn-slide-text">
-            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-            <span><strong>Lista aplicanti</strong></span>
-        </a>
-        {% else %}
-        <a href="{% url 'web_page:application_enrollment' %}"
-           class="btn btn-primary a-btn-slide-text">
-            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-            <span><strong>Cerere înscriere</strong></span>
-        </a>
-        {% endif %}
     </div>
 </div>
 
@@ -95,8 +90,6 @@
             </div>
             <div class="clearfix"></div>
         </div>
-        c
-
         <div class="stylegrid3">
             <div class="col-md-6 stylegridimg">
                 <img src="{% static 'media/s1.jpg' %}" alt="">
@@ -121,6 +114,51 @@
             <div class="clearfix"></div>
         </div>
     </div>
+</div>
+<div class="portfolio-agileinfo" id="gallery">
+    <section class="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="col-lg-12">
+                        <div class="about-agileits-title">
+                            <h3>OUR TEAM</h3>
+                        </div>
+                        <h6 class="description">Studenti reprezentanti:</h6>
+                        {% for user in students %}
+                        {% if not user.is_superuser %}
+                        <div class="row pt-md">
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 profile">
+                                <div class="img-box">
+                                    <img src="{{ user.profile.avatar.url }}">
+                                    <ul class="text-center">
+                                        <a href="#">
+                                            <li><i class="fa fa-facebook"></i></li>
+                                        </a>
+                                        <a href="#">
+                                            <li><i class="fa fa-twitter"></i></li>
+                                        </a>
+                                        <a href="#">
+                                            <li><i class="fa fa-linkedin"></i></li>
+                                        </a>
+                                    </ul>
+                                </div>
+                                <h1>{{user.get_full_name}}</h1>
+                                {% if user.is_admin %}
+                                <h2>Admin/ Student reprezentant</h2>
+                                {% else %}
+                                <h2>Student reprezentant</h2>
+                                {% endif %}
+                                <p>{{user.profile.get_team_describe}}</p>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
 <!-- contact -->
@@ -198,31 +236,6 @@
     </div>
 </div>
 
-<!-- bootstrap-modal-pop-up -->
-<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                Campus
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img src="{% static 'media/s1.jpg' %}" alt=" " class="img-responsive"/>
-                <p>Ut enim ad minima veniam, quis nostrum
-                    exercitationem ullam corporis suscipit laboriosam,
-                    nisi ut aliquid ex ea commodi consequatur? Quis autem
-                    vel eum iure reprehenderit qui in ea voluptate velit
-                    esse quam nihil molestiae consequatur, vel illum qui
-                    dolorem eum fugiat quo voluptas nulla pariatur.
-                    <i>" Quis autem vel eum iure reprehenderit qui in ea voluptate velit
-                        esse quam nihil molestiae consequatur.</i></p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- //bootstrap-modal-pop-up -->
-
 <!-- js for portfolio  -->
 <script src="{% static 'js/jquery.chocolat.js' %}"></script>
 <link rel="stylesheet " href="{% static 'css/chocolat.css' %}" type="text/css" media="all"/>
@@ -230,6 +243,30 @@
 		$(function () {
 			$('.portfolio-grids a').Chocolat();
 		});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -259,6 +296,30 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 <script src="{% static 'js/bootstrap.js' %}"></script>
 <script type="text/javascript">
@@ -275,6 +336,30 @@
 			$().UItoTop({ easingType: 'easeOutQuart' });
 
 			});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

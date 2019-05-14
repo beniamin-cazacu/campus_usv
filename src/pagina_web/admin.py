@@ -8,7 +8,7 @@ from pagina_web.models import Profile, ApplicationEnrollment, User, FaqCategory,
 
 
 class UsersAdmin(admin.ModelAdmin):
-    list_display = ('email', 'first_name', 'last_name', 'is_active', 'is_staff', 'is_superuser')
+    list_display = ('email', 'first_name', 'last_name', 'is_admin', 'is_staff', 'is_superuser')
 
 
 admin.site.register(User, UsersAdmin)
@@ -23,7 +23,8 @@ admin.site.register(Profile, ProfileAdmin)
 
 class ApplicationEnrollmentAdmin(admin.ModelAdmin):
     list_display = (
-        'first_name', 'last_name', 'email', 'study_type', 'faculty', 'specialization', 'year_of_study', 'status')
+        'first_name', 'last_name', 'email', 'avatar', 'study_type', 'faculty', 'specialization', 'year_of_study',
+        'status')
 
 
 admin.site.register(ApplicationEnrollment, ApplicationEnrollmentAdmin)

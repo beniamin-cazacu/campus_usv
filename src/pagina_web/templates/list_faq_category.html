@@ -11,35 +11,36 @@
 <br>
 <br>
 <br>
-
-<div class='row'>
-
-
-    <h1>
-        <center> List FAQ category</center>
-    </h1>
-    <hr>
-    <div class="col-sm-8 text-left">
-        <ol>
-            {% for obj in object_list %}
-            <li>
-                <a href='{{ obj.get_absolute_url }}'> {{ obj.name }} </a><br/>
-            </li>
-            <hr>
-            {% empty %}
-            {% endfor %}
-        </ol>
-        {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li
-                    {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
-            </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
+<div class="container">
+    <div class='row'>
+        <div class="col-md-12 ">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="about-agileits-title">
+                        <h3>List FAQ category</h3>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="box box-info">
+                        <div class="box-body">
+                            <div class="col-sm-8 text-left">
+                                <ol>
+                                    {% for obj in object_list %}
+                                    <li>
+                                        <a href='{{ obj.get_absolute_url }}'> {{ obj.name }} </a><br/>
+                                    </li>
+                                    <hr>
+                                    {% empty %}
+                                    {% endfor %}
+                                </ol>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <hr>
 </div>
 
 {% endblock content %}
