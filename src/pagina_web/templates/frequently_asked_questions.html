@@ -47,6 +47,8 @@
                                 <hr>
                                 <strong>
                                     {% for obj in object_list %}
+                                    <p>Categoria: {{ obj.faq_category }}</p>
+                                    <hr>
                                     <div class="panel-group" id="faqAccordion">
                                         <div class="panel panel-default ">
                                             <div class="panel-heading accordion-toggle question-toggle collapsed"

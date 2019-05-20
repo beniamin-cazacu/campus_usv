@@ -7,8 +7,11 @@ class ApplicationEnrollmentForm(forms.ModelForm):
     class Meta:
         model = ApplicationEnrollment
         fields = ["avatar", "first_name", "last_name", "email", "birth_date", "country", 'county', "city",
-                  "nationality",
-                  "study_type", "faculty", "specialization", "year_of_study", "motivation"]
+                  "nationality", "study_type", "faculty", "specialization", "year_of_study", "motivation"]
+
+        widgets = {
+            'birth_date': forms.DateInput(attrs={'placeholder': 'YYYY-MM-DD'}),
+        }
 
     def __init__(self, *args, **kwargs):
         super(ApplicationEnrollmentForm, self).__init__(*args, **kwargs)

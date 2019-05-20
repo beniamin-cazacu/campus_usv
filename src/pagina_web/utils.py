@@ -6,6 +6,11 @@ from pagina_web.models import User
 
 
 def send_email_application_enrollement(student_id, first_name, last_name, email, domain):
+    """ Function for send email to each applicant
+            @:param student_id - student id
+            @:param first_name, last_name, email - applicant details
+            @:param domain -  website domain
+            """
     content = {
         'student_id': student_id,
         'first_name': first_name,
@@ -20,7 +25,12 @@ def send_email_application_enrollement(student_id, first_name, last_name, email,
 
 
 def register_new_student(student, domain):
-    # try:
+    """
+      Function for registering the student after he / she has been accepted
+      :param student: student object
+      :param domain: website domain
+      """
+
     generate_password = BaseUserManager().make_random_password(length=6)
     new_student = User()
     new_student.first_name = student.first_name
@@ -45,11 +55,12 @@ def register_new_student(student, domain):
     send_email.send()
 
 
-# except:
-#     pass
-
-
 def student_rejected(student, domain):
+    """
+    the rejected student will receive an email
+    :param student:
+    :param domain:
+    """
     to_email = student.email
     subject = 'Student reprezentat'
     content = {
@@ -64,6 +75,11 @@ def student_rejected(student, domain):
 
 
 def save_profile(user, student):
+    """
+    Create an account for the accepted student
+    :param user: new user account
+    :param student: student object
+    """
     user = User.objects.get(pk=user)
     user.profile.avatar = student.avatar
     user.profile.birth_date = student.birth_date

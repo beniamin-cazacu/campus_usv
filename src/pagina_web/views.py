@@ -15,14 +15,23 @@ from pagina_web.utils import send_email_application_enrollement, register_new_st
 
 
 def redirect_home(request):
+    """
+        Redirect to home page
+    """
     return redirect("web_page:home_page")
 
 
 class AboutView(TemplateView):
+    """
+        Return details about developers
+    """
     template_name = "developers_details.html"
 
 
 class UserProfileView(TemplateView):
+    """
+        Return data about the user logged
+        """
     template_name = "user_profile.html"
     model = User
 
@@ -33,6 +42,9 @@ class UserProfileView(TemplateView):
 
 
 class HomePageView(TemplateView):
+    """
+           Return home page
+           """
     template_name = "home_page.html"
 
     def get_context_data(self, **kwargs):
@@ -43,6 +55,9 @@ class HomePageView(TemplateView):
 
 
 class ApplicationEnrollmentView(FormView):
+    """
+            Return a form where students can apply for enrollment
+        """
     template_name = "application_enrollment.html"
     form_class = ApplicationEnrollmentForm
 
@@ -60,6 +75,9 @@ class ApplicationEnrollmentView(FormView):
 
 
 class ListApplicantsView(ListView):
+    """
+        Return a list with all applicants
+    """
     template_name = 'list_applicants.html'
 
     def get_queryset(self):
@@ -68,6 +86,9 @@ class ListApplicantsView(ListView):
 
 
 class ApplicantDetailsView(DetailView):
+    """
+        Return details about applicants
+    """
     template_name = 'applicant_details.html'
     model = ApplicationEnrollment
 
@@ -79,8 +100,9 @@ class ApplicantDetailsView(DetailView):
 
 def response_application(request, pk, response_id):
     """ Response for student application (accepted or rejected) and send email
-        @:param pk - student id
-        @:param response_id (0 - rejected , 1 - accepted)
+        :param pk: student id
+        :param response_id:  (0 - rejected , 1 - accepted)
+        :return : redirect to another template
         """
     student = ApplicationEnrollment.objects.get(id=pk)
     current_site = get_current_site(request)
