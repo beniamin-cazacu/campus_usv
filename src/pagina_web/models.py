@@ -88,6 +88,10 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 
 class Profile(models.Model):
+    """
+       Store user profile
+       :model:`auth.User`.
+       """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     avatar = models.ImageField(upload_to='avatar/', default='avatar/original.jpg', blank=True)
     birth_date = models.DateField(null=True, blank=True)
@@ -120,6 +124,10 @@ def save_user_profile(sender, instance, **kwargs):
 
 
 class ApplicationEnrollment(models.Model):
+    """
+           Store information about applicants
+           :model:`ApplicationEnrollment`.
+           """
     avatar = models.ImageField(upload_to='avatar/', default='avatar/original.jpg', blank=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)

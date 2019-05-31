@@ -43,8 +43,17 @@ class UserProfileView(TemplateView):
 
 class HomePageView(TemplateView):
     """
-           Return home page
-           """
+    Return home page .
+
+    **Context**
+
+    ``mymodel``
+        An instance of :model:`User`.
+
+    **Template:**
+
+    :template:`pagina_web/home_page.html`
+    """
     template_name = "home_page.html"
 
     def get_context_data(self, **kwargs):
@@ -56,7 +65,11 @@ class HomePageView(TemplateView):
 
 class ApplicationEnrollmentView(FormView):
     """
-            Return a form where students can apply for enrollment
+     Return a form where students can apply for enrollment
+
+    **Template:**
+
+    :template:`pagina_web/application_enrollment.html`
         """
     template_name = "application_enrollment.html"
     form_class = ApplicationEnrollmentForm
@@ -76,7 +89,16 @@ class ApplicationEnrollmentView(FormView):
 
 class ListApplicantsView(ListView):
     """
-        Return a list with all applicants
+    Return a list with all applicants
+
+    **Context**
+
+    ``mymodel``
+        An instance of :model:`ApplicationEnrollment`.
+
+    **Template:**
+
+    :template:`pagina_web/list_applicants.html`
     """
     template_name = 'list_applicants.html'
 
@@ -88,6 +110,15 @@ class ListApplicantsView(ListView):
 class ApplicantDetailsView(DetailView):
     """
         Return details about applicants
+
+    **Context**
+
+    ``mymodel``
+        An instance of :model:`ApplicantDetailsView`.
+
+    **Template:**
+
+    :template:`pagina_web/applicant_details.html`
     """
     template_name = 'applicant_details.html'
     model = ApplicationEnrollment
@@ -143,6 +174,18 @@ class ListFaqCategoryView(ListView):
 
 
 class FrequentlyAskedQuestionsView(ListView):
+    """
+           Return a list with Frequently Asked Questions
+
+       **Context**
+
+       ``mymodel``
+           An instance of :model:`FrequentlyAskedQuestions`.
+
+       **Template:**
+
+       :template:`pagina_web/frequently_asked_questions.html`
+       """
     template_name = 'frequently_asked_questions.html'
     model = FrequentlyAskedQuestions
 
@@ -152,7 +195,9 @@ class FrequentlyAskedQuestionsView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(FrequentlyAskedQuestionsView, self).get_context_data(**kwargs)
-        context['category_pk'] = self.kwargs.get('pk')
+        category_pk = self.kwargs.get('pk')
+        context['category_pk'] = category_pk
+        context['category'] = FaqCategory.objects.get(pk=category_pk)
         return context
 
 
