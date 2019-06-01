@@ -2,7 +2,144 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d94a102-7ef2-400b-aa5d-f9e45860c073" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/pagina_web/templates/developers_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/campus_usv/src/pagina_web/templates/developers_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/pagina_web/templates/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/campus_usv/src/pagina_web/templates/home_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/pagina_web/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/campus_usv/src/pagina_web/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/pagina_web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/campus_usv/src/pagina_web/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/campus_usv/src/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/about1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/arrow1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/avatar/22281864_1453933038017666_2952004577045534443_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/avatar/22281864_1453933038017666_2952004577045534443_n_cGHNdUv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/avatar/22281864_1453933038017666_2952004577045534443_n_pu0joNq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/avatar/blue-sky-wallpaper.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/avatar/blue-sky-wallpaper_bkZxLzC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/avatar/blue-sky-wallpaper_ghrq42L.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/avatar/blue-sky-wallpaper_j8VkvPx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/avatar/blue-sky-wallpaper_oVCy2Gr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/avatar/imagini_77.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/avatar/imagini_77_MWGdwwk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/avatar/nobody_m.original.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/avatar/original.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/b2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/c18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/g1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/s1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/students-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/students.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/univ-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/univ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus_usv/src/static/media/usv-ico.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/docs/__init__.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/docs/admin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/docs/apps.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/docs/forms.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/docs/models.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/docs/pycco.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/docs/tests.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/docs/urls.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/docs/utils.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/docs/views.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/migrations/0002_applicationenrollment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/migrations/0002_auto_20180512_1130.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/migrations/0003_applicationenrollment_is_accepted.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/migrations/0003_auto_20180512_1340.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/migrations/0004_auto_20180511_1603.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/migrations/0004_auto_20180514_1038.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/migrations/0005_applicationenrollment_date_applied.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/migrations/0005_auto_20180514_1210.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/migrations/0006_auto_20180514_1739.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/migrations/0007_auto_20180515_0920.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/migrations/0008_auto_20180515_1037.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/migrations/0009_auto_20180515_1042.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/migrations/0010_auto_20180518_1027.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/add_edit_faq.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/applicant_details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/application_enrollment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/developers_details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/edit_user_photo_profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/edit_user_profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/emails/email_applicant_accepted.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/emails/email_applicant_rejected.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/emails/email_application_enrollment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/frequently_asked_questions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/home_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/list_applicants.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/list_faq_category.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/registration/change_password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/registration/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/templates/user_profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pagina_web/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/platforma_web/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/platforma_web/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/platforma_web/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/platforma_web/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/css/aplicant_details.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/css/chocolat.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/css/list_aplicants.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/css/user_profile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/js/easing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/js/jquery-2.1.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/js/jquery.chocolat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/js/list_aplicants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/js/move-top.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/about1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/arrow1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/avatar/12744240_1707364802815169_2885899092686039169_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/avatar/2015-12-08_01.02.51.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/avatar/22281864_1453933038017666_2952004577045534443_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/avatar/22281864_1453933038017666_2952004577045534443_n_cGHNdUv.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/avatar/22281864_1453933038017666_2952004577045534443_n_pu0joNq.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/avatar/33216386_1855754001131150_4221667902362746880_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/avatar/blue-sky-wallpaper.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/avatar/blue-sky-wallpaper_bkZxLzC.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/avatar/blue-sky-wallpaper_ghrq42L.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/avatar/blue-sky-wallpaper_j8VkvPx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/avatar/blue-sky-wallpaper_oVCy2Gr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/avatar/imagini_77.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/avatar/imagini_77_MWGdwwk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/avatar/nobody_m.original.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/avatar/original.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/b2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/c18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/g1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/s1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/students-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/students.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/univ-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/univ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/static/media/usv-ico.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/snippets/css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/snippets/js.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,61 +147,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/platforma_web/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/platforma_web/wsgi.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/snippets/css.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/registration/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="69" selection-start-line="69" selection-end-line="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/developers_details.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1390">
-              <caret line="289" column="22" selection-start-line="289" selection-start-column="22" selection-end-line="289" selection-end-column="22" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#4;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,6 +171,7 @@
     <option name="width" value="1299" />
     <option name="height" value="743" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -99,51 +183,6 @@
             <path>
               <item name="campus_usv" type="b2602c69:ProjectViewProjectNode" />
               <item name="campus_usv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="campus_usv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="campus_usv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="campus_usv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="campus_usv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pagina_web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="campus_usv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="campus_usv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pagina_web" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="campus_usv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="campus_usv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pagina_web" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="registration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="campus_usv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="campus_usv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="platforma_web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="campus_usv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="campus_usv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="campus_usv" type="b2602c69:ProjectViewProjectNode" />
-              <item name="campus_usv" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="snippets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="campus_usv" type="b2602c69:ProjectViewProjectNode" />
@@ -185,7 +224,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <frame x="67" y="25" width="1299" height="743" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27664578" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -198,7 +237,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2882736" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.6514658" />
       <window_info anchor="bottom" id="Python Console" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -261,11 +300,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/principal_page.html" />
-    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/developer_details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/developer_details.html" />
     <entry file="file://$PROJECT_DIR$/src/pagina_web/templates/developers_details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1390">
